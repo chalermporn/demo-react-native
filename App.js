@@ -32,6 +32,7 @@ export default class App extends React.Component {
     return Promise.all([
       Asset.loadAsync([
         require('./assets/images/robot-dev.png'),
+        require('./assets/images/bird.jpg'),
         require('./assets/images/robot-prod.png'),
       ]),
       Font.loadAsync({

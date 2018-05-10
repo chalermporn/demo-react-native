@@ -25,40 +25,43 @@ export default class HomeScreen extends React.Component {
             <Image
               source={
                 __DEV__
-                  ? require('../assets/images/robot-dev.png')
-                  : require('../assets/images/robot-prod.png')
+                  ? require('../assets/images/bird.jpg')
+                  : require('../assets/images/bird.jpg')
               }
               style={styles.welcomeImage}
             />
           </View>
 
           <View style={styles.getStartedContainer}>
-            {this._maybeRenderDevelopmentModeWarning()}
+            {/* {this._maybeRenderDevelopmentModeWarning()} */}
 
-            <Text style={styles.getStartedText}>Get started by opening</Text>
-
-            <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
+            <Text style={styles.getStartedText}>Hello</Text>
+            <Text style={styles.developmentModeText}>
+              ยินดีต้อรับ เข้าสู้ App ของเรา 
+            </Text>
+            {/* <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
               <MonoText style={styles.codeHighlightText}>screens/HomeScreen.js</MonoText>
             </View>
 
             <Text style={styles.getStartedText}>
               Change this text and your app will automatically reload.
-            </Text>
+            </Text> */}
           </View>
 
-          <View style={styles.helpContainer}>
+          {/* <View style={styles.helpContainer}>
             <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
               <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
             </TouchableOpacity>
-          </View>
+          </View> */}
         </ScrollView>
 
         <View style={styles.tabBarInfoContainer}>
-          <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
+          {/* <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
 
           <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
             <MonoText style={styles.codeHighlightText}>navigation/MainTabNavigator.js</MonoText>
-          </View>
+          </View> */}
+            {this._maybeRenderDevelopmentModeWarning()}
         </View>
       </View>
     );
@@ -68,7 +71,7 @@ export default class HomeScreen extends React.Component {
     if (__DEV__) {
       const learnMoreButton = (
         <Text onPress={this._handleLearnMorePress} style={styles.helpLinkText}>
-          Learn more
+          Demo
         </Text>
       );
 
@@ -88,7 +91,7 @@ export default class HomeScreen extends React.Component {
   }
 
   _handleLearnMorePress = () => {
-    WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/guides/development-mode');
+    WebBrowser.openBrowserAsync('https://expo.io/@arayasoft');
   };
 
   _handleHelpPress = () => {
